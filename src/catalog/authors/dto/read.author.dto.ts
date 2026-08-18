@@ -1,9 +1,10 @@
 export class ReadAuthorDto {
-  id: string;
+  id?: string;
+  name: string;
   country: string;
-  description?: string;
-  photo?: string;
+  description?: string | null;
+  photo: string | null;
   dateOfBirth?: Date;
-  dateOfDeath?: Date;
+  dateOfDeath?: Date | null;
   albumsTotal: number;
 }

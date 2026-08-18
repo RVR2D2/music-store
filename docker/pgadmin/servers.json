@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "music-store",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "music-store",
+      "Username": "root",
+      "SSLMode": "prefer"
+    }
+  }
+}

@@ -36,6 +36,7 @@ export class AuthorsController {
   @Post()
   async create(@Body() data: CreateAuthorDto): Promise<ReadAuthorDto> {
     const id = await this.authorsService.create(data);
+    // @ts-ignore
     return this.authorsService.getOne(id);
   }
 

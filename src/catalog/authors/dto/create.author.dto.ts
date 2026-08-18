@@ -17,7 +17,7 @@ export class CreateAuthorDto {
 
   @Type(() => Date)
   @IsDate()
-  dateOfBirth?: Date;
+  dateOfBirth: Date;
 
   @IsOptional()
   @Type(() => Date)

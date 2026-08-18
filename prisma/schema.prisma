@@ -1,0 +1,21 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Author {
+  id          String    @id @default(uuid(7)) @db.Uuid
+  name        String    @unique @db.VarChar(100)
+  country     String    @db.VarChar(50)
+  description String?   @db.VarChar(1000)
+  photo       String?   @db.VarChar(500)
+  dateOfBirth DateTime  @map("date_of_birth") @db.Timestamptz()
+  dateOfDeath DateTime? @map("date_of_death") @db.Timestamptz()
+
+  @@map("author")
+}

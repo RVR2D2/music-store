@@ -1,6 +1,6 @@
 import { IsUUID } from 'class-validator';
 
 export class GetAuthorParams {
-  @IsUUID(4)
+  @IsUUID(7)
   authorId: string;
 }
